@@ -556,10 +556,52 @@ span.necessarily{
 	margin: 2px 5px 0 0;
     padding: 7px;
     width: 600px;
-		-moz-border-radius: 5px;
-	 -webkit-border-radius: 5px;
-			 border-radius: 5px;	
+	   -moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+			border-radius: 5px;	
 }
 .small-text-form-input{
 	width: 100px;
+}
+
+.auth-form {
+	width: 280px;
+}
+.admin-link a {
+	color: #F8E7B8;
+	font: bold 12px helvetica,arial,serif;
+	margin-right: 5px;
+	text-decoration: underline;
+}
+#mainpanel .admin-link a {
+	color: #CF9C0F;
+}
+.independ {
+	margin: 10px 0 5px;
+	color: #F8E7B8;
+	font-weight: bold;
+}
+.form-reqs {
+	color: #F8E7B8;
+	margin: 3px 0 0;
+	font-size: 12px;
+}
+.brown {
+    background: none repeat scroll 0 0 #49413D;
+    -moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+    padding: 10px 15px;
+}
+.lnk-submit {
+	background: none repeat scroll 0 0 #CF9C0F;
+	border: 1px solid #CF9C0F;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #EEEEEE;
+	font: bold 12px arial;
+	letter-spacing: 0.2px;
+	margin: 15px 0 5px;
+	padding: 4px;
 }

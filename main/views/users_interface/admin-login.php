@@ -10,7 +10,7 @@
 	</div>
 	<div id="page-wrap">
 		<?=$this->load->view('users_interface/menu');?>
-		<div class="Auth-form">
+		<div class="auth-form">
 			<?php $this->load->view('users_interface/formlogin');?>
 		</div>
 		<?=$this->load->view('users_interface/footer');?>
