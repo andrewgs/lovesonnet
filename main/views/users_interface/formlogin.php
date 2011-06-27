@@ -1,17 +1,16 @@
-<?= form_open($this->uri->uri_string(),array('id'=>'formauth','class'=>'formular')); ?>
-	<h2>Введите логин и пароль</h2>
+<?= form_open($this->uri->uri_string(),array('id'=>'subForm','class'=>'formular rounded-corners teaser')); ?>
+	<h4 class="font-replace">Введите логин и пароль</h4>
 	<?=validation_errors();?>
 	<?php if($error):?>
-		<div class="fvalid_error">Не верный логин или пароль</div>
-	<?endif;?>
-	<div class="form-login">
-		<b>Логин:</b><span class="necessarily" title="Поле не может быть пустым">*</span><br/>
-		<input class="text-form-input" type="text" name="login-name" value="" />
-		<div class="clear"></div>
-		<b>Пароль:</b><span class="necessarily" title="Поле не может быть пустым">*</span><br/>
-		<input class="text-form-input" type="password" name="login-pass" value="" />
-		<div class="clear"></div><br/>
-		<input type="submit" class="lnk-submit" name="submit" value="Авторизоваться"/>
+		<h5 class="fvalid_error font-replace">Не верный логин или пароль</h5>
+	<? else: ?>
+		<h5 class="fvalid_error font-replace">Проверьте раскладку клавиатуры</h5>
+	<? endif; ?>
+	<div>
+		<label title="Поле не может быть пустым" for="name">Логин:</label>
+		<input name="login-name" id="name" placeholder="Имя" type="text"><br>
+		<label title="Поле не может быть пустым" for="email">Пароль:</label>
+		<input name="login-pass" id="phikyt-phikyt" placeholder="Почта" type="text"><br>
+		<input value="ОК" id="submit" type="submit" name="submit">
 	</div>
-	<div class="clear"></div>
 <?= form_close(); ?>
