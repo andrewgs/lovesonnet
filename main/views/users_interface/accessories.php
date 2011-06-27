@@ -18,7 +18,7 @@
 			<ul id="news-list">
 			<?php for($i=0;$i<count($units);$i++):?>
 				<li class="post rounded-corners" id="access-<?=$i;?>">
-				<?php $content = '<div class="news-bg rounded-corners"><img src="'.$baseurl.'sunit/viewimage/'.$units[$i]['id'].'" title="'.$units[$i]['title'].'" alt="'.$units[$i]['title'].'"/></div><h4 class="font-replace">'.$units[$i]['title'].'</h4><h5 class="font-replace">'.$units[$i]['note'].'</h5><h5 class="font-replace">Модель #'.$units[$i]['model'].'</h5>';?>
+				<?php $content = '<div class="news-bg rounded-corners"><img src="'.$baseurl.'bunit/viewimage/'.$units[$i]['id'].'" title="'.$units[$i]['title'].'" alt="'.$units[$i]['title'].'"/></div><h4 class="font-replace">'.$units[$i]['title'].'</h4><h5 class="font-replace">'.$units[$i]['note'].'</h5><h5 class="font-replace">Модель #'.$units[$i]['model'].'</h5>';?>
 					<?=anchor('accessories-info/'.$units[$i]['id'],$content,array('title'=>$units[$i]['title']));?>
 				</li>
 			<?php endfor;?>

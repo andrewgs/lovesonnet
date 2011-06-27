@@ -112,10 +112,16 @@ class Admin_interface extends CI_Controller {
 			else:
 				$_POST['submit'] = NULL;
 				if($_FILES['userfile']['error'] != 4):
-					$_POST['image'] = $this->resize_img($_FILES['userfile']['tmp_name'],500,455,TRUE);
-//					$_POST['image'] = file_get_contents($_FILES['userfile']['tmp_name']);
-					$_POST['simage'] = $this->resize_img($_FILES['userfile']['tmp_name'],153,129,TRUE);
-					$_POST['bimage'] = $this->resize_img($_FILES['userfile']['tmp_name'],280,153,FALSE);
+					$file = $_FILES['userfile']['tmp_name'];
+					$newfile1 = $file.'.bak1';
+					$newfile2 = $file.'.bak2';
+					copy($file,$newfile1);
+					copy($file,$newfile2);
+					$_POST['image'] = $this->resize_img($file,500,455,TRUE);
+					$_POST['bimage'] = $this->resize_big_image($newfile1,264,137,TRUE);
+					$_POST['simage'] = $this->resize_img($newfile2,153,129,TRUE);
+					unlink($newfile1);
+					unlink($newfile2);
 				else:
 					$_POST['image'] = '';
 				endif;
@@ -164,10 +170,16 @@ class Admin_interface extends CI_Controller {
 			else:
 				$_POST['submit'] = NULL;
 				if($_FILES['userfile']['error'] != 4):
-					$_POST['image'] = $this->resize_img($_FILES['userfile']['tmp_name'],500,455,TRUE);
-//					$_POST['image'] = file_get_contents($_FILES['userfile']['tmp_name']);
-					$_POST['simage'] = $this->resize_img($_FILES['userfile']['tmp_name'],153,129,TRUE);
-					$_POST['bimage'] = $this->resize_img($_FILES['userfile']['tmp_name'],280,153,FALSE);
+					$file = $_FILES['userfile']['tmp_name'];
+					$newfile1 = $file.'.bak1';
+					$newfile2 = $file.'.bak2';
+					copy($file,$newfile1);
+					copy($file,$newfile2);
+					$_POST['image'] = $this->resize_img($file,500,455,TRUE);
+					$_POST['bimage'] = $this->resize_big_image($newfile1,264,137,TRUE);
+					$_POST['simage'] = $this->resize_img($newfile2,153,129,TRUE);
+					unlink($newfile1);
+					unlink($newfile2);
 				else:
 					$_POST['image'] = '';
 				endif;
@@ -315,7 +327,32 @@ class Admin_interface extends CI_Controller {
 			$y = 0; $height = $size_y;
 		endif;
 		$image_dst = ImageCreateTrueColor($wight,$height);
-		imageCopy($image_dst,$image_src,0,0,$x,$y,$wight,$height);
+		if($size_x > $size_y):
+			imageCopy($image_dst,$image_src,0,0,$x,0,$wight,$height);
+		else:
+			imageCopy($image_dst,$image_src,0,0,$x,20,$wight,$height+20);
+		endif;
+		imagePNG($image_dst,$tmpName);
+		imagedestroy($image_dst);
+		imagedestroy($image_src);
+		$image = file_get_contents($tmpName);
+		return $image;
+	}
+													 				
+	function resize_big_image($tmpName,$wgt,$hgt,$ratio){
+			
+		chmod($tmpName,0777);
+		
+		$img = getimagesize($tmpName);
+		$this->resize_image($tmpName,$wgt,$img[1],$ratio);
+		switch ($img[2]){
+			case 1: $image_src = imagecreatefromgif($tmpName); break;
+			case 2: $image_src = imagecreatefromjpeg($tmpName); break;
+			case 3:	$image_src = imagecreatefrompng($tmpName); break;
+		}
+		
+		$image_dst = ImageCreateTrueColor($wgt,$hgt);
+		imageCopy($image_dst,$image_src,0,0,0,20,$wgt,$hgt);
 		imagePNG($image_dst,$tmpName);
 		imagedestroy($image_dst);
 		imagedestroy($image_src);
