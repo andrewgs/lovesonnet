@@ -117,7 +117,7 @@ class Admin_interface extends CI_Controller {
 					$newfile2 = $file.'.bak2';
 					copy($file,$newfile1);
 					copy($file,$newfile2);
-					$_POST['image'] = $this->resize_img($file,500,455,TRUE);
+					$_POST['image'] = $this->resize_main_image($file,500,455,TRUE);
 					$_POST['bimage'] = $this->resize_big_image($newfile1,264,137,TRUE);
 					$_POST['simage'] = $this->resize_img($newfile2,153,129,TRUE);
 					unlink($newfile1);
@@ -175,7 +175,7 @@ class Admin_interface extends CI_Controller {
 					$newfile2 = $file.'.bak2';
 					copy($file,$newfile1);
 					copy($file,$newfile2);
-					$_POST['image'] = $this->resize_img($file,500,455,TRUE);
+					$_POST['image'] = $this->resize_main_image($file,500,455,TRUE);
 					$_POST['bimage'] = $this->resize_big_image($newfile1,264,137,TRUE);
 					$_POST['simage'] = $this->resize_img($newfile2,153,129,TRUE);
 					unlink($newfile1);
@@ -353,6 +353,43 @@ class Admin_interface extends CI_Controller {
 		
 		$image_dst = ImageCreateTrueColor($wgt,$hgt);
 		imageCopy($image_dst,$image_src,0,0,0,20,$wgt,$hgt);
+		imagePNG($image_dst,$tmpName);
+		imagedestroy($image_dst);
+		imagedestroy($image_src);
+		$image = file_get_contents($tmpName);
+		return $image;
+	}			
+																		
+	function resize_main_image($tmpName,$wgt,$hgt,$ratio){
+			
+		chmod($tmpName,0777);
+		
+		$this->load->library('image_lib');
+		$this->image_lib->clear();
+		$config['image_library'] 	= 'gd2';
+		$config['source_image']		= $tmpName; 
+		$config['create_thumb'] 	= FALSE;
+		$config['maintain_ratio'] 	= $ratio;
+		$config['quality'] 			= 100;
+		$config['master_dim'] 		= 'width';
+		$config['width'] 			= $wgt;
+		$config['height'] 			= $hgt;
+		$this->image_lib->initialize($config);
+		$this->image_lib->resize();
+		
+		switch ($img[2]){
+			case 1: $image_src = imagecreatefromgif($tmpName); break;
+			case 2: $image_src = imagecreatefromjpeg($tmpName); break;
+			case 3:	$image_src = imagecreatefrompng($tmpName); break;
+		}
+		$img = getimagesize($tmpName);
+		$height = $img[1]-20;
+		if($height>$hgt):
+			$image_dst = ImageCreateTrueColor($wgt,$hgt);
+		else:
+			$image_dst = ImageCreateTrueColor($wgt,$img[1]-20);
+		endif;
+		imageCopy($image_dst,$image_src,0,0,0,20,$wgt,$img[1]+20);
 		imagePNG($image_dst,$tmpName);
 		imagedestroy($image_dst);
 		imagedestroy($image_src);
