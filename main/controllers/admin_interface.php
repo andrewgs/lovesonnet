@@ -117,7 +117,7 @@ class Admin_interface extends CI_Controller {
 					$newfile2 = $file.'.bak2';
 					copy($file,$newfile1);
 					copy($file,$newfile2);
-					$_POST['image'] = $this->resize_main_image($file,500,455,TRUE);
+					$_POST['image'] = $this->resize_main_image($file,500,800,TRUE);
 					$_POST['bimage'] = $this->resize_big_image($newfile1,264,137,TRUE);
 					$_POST['simage'] = $this->resize_img($newfile2,153,129,TRUE);
 					unlink($newfile1);
@@ -175,7 +175,7 @@ class Admin_interface extends CI_Controller {
 					$newfile2 = $file.'.bak2';
 					copy($file,$newfile1);
 					copy($file,$newfile2);
-					$_POST['image'] = $this->resize_main_image($file,500,455,TRUE);
+					$_POST['image'] = $this->resize_main_image($file,500,800,TRUE);
 					$_POST['bimage'] = $this->resize_big_image($newfile1,264,137,TRUE);
 					$_POST['simage'] = $this->resize_img($newfile2,153,129,TRUE);
 					unlink($newfile1);
@@ -363,7 +363,7 @@ class Admin_interface extends CI_Controller {
 	function resize_main_image($tmpName,$wgt,$hgt,$ratio){
 			
 		chmod($tmpName,0777);
-		
+		$img = getimagesize($tmpName);
 		$this->load->library('image_lib');
 		$this->image_lib->clear();
 		$config['image_library'] 	= 'gd2';

@@ -4314,7 +4314,7 @@
 				<treenode node="title;Php:Var Name;12;3;18;3;34;;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</phptree>
-		</csfile><csfile name="C:\denwer\home\lovesonnet.ru\www\main\views\users_interface\formlogin.php" crc="158798980">
+		</csfile><csfile name="C:\denwer\home\lovesonnet.ru\www\main\views\users_interface\formlogin.php" crc="1717692057">
 			<phptree>
 				<treenode node="error;Php:Var Name;10;3;16;3;34;;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
@@ -4344,7 +4344,7 @@
 				<treenode node="this;Php:Var Name;3;5;8;5;34;;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</phptree>
-		</csfile><csfile name="C:\denwer\home\lovesonnet.ru\www\main\views\users_interface\admin-login.php" crc="362914322">
+		</csfile><csfile name="C:\denwer\home\lovesonnet.ru\www\main\views\users_interface\admin-login.php" crc="-593031539">
 			<phptree>
 				<treenode node="this;Php:Var Name;3;5;8;5;34;;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
@@ -4402,7 +4402,7 @@
 				<treenode node="unit;Php:Var Name;83;10;88;10;34;;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
 			</phptree>
-		</csfile><csfile name="C:\denwer\home\lovesonnet.ru\www\main\views\admin_interface\formadd.php" crc="-1612069445">
+		</csfile><csfile name="C:\denwer\home\lovesonnet.ru\www\main\views\admin_interface\formadd.php" crc="1300282905">
 			<phptree>
 				<treenode node="this;Php:Var Name;24;0;29;0;34;;;v;;r;;d-1,-1;;b0,0;;m">
 				</treenode>
@@ -4617,44 +4617,44 @@
 			</phptree>
 		</csfile><csfile name="C:\denwer\home\lovesonnet.ru\www\main\errors\error_404.php" crc="-1891731722">
 		</csfile><csfile name="C:\denwer\home\lovesonnet.ru\www\main\core\index.html" crc="-1574479902">
-		</csfile><csfile name="C:\denwer\home\lovesonnet.ru\www\main\controllers\users_interface.php" crc="1161911808">
+		</csfile><csfile name="C:\denwer\home\lovesonnet.ru\www\main\controllers\users_interface.php" crc="1826835989">
 			<phptree>
-				<treenode node="Users_interface;Php:Class Name;0;2;1;348;34;;;vCI_Controller;;c;;r;;d44,2;;b0,0;;m">
+				<treenode node="Users_interface;Php:Class Name;0;2;1;357;34;;;vCI_Controller;;c;;r;;d44,2;;b0,0;;m">
 					<treenode node="__construct;Php:Function Name;1;10;2;36;34;;;v;;r;;d23,10;;b0,0;;m">
 					</treenode>
-					<treenode node="about;Php:Function Name;1;185;2;198;34;;;v;;r;;d17,185;;b0,0;;m">
+					<treenode node="about;Php:Function Name;1;194;2;207;34;;;v;;r;;d17,194;;b0,0;;m">
 					</treenode>
-					<treenode node="access_info;Php:Function Name;1;113;2;132;34;;;v;;r;;d23,113;;b0,0;;m">
+					<treenode node="access_info;Php:Function Name;1;122;2;141;34;;;v;;r;;d23,122;;b0,0;;m">
 					</treenode>
-					<treenode node="accessories;Php:Function Name;1;134;2;168;34;;;v;;r;;d23,134;;b0,0;;m">
+					<treenode node="accessories;Php:Function Name;1;143;2;177;34;;;v;;r;;d23,143;;b0,0;;m">
 					</treenode>
-					<treenode node="admin_login;Php:Function Name;1;255;2;290;34;;;v;;r;;d23,255;;b0,0;;m">
+					<treenode node="admin_login;Php:Function Name;1;264;2;299;34;;;v;;r;;d23,264;;b0,0;;m">
 					</treenode>
-					<treenode node="contact;Php:Function Name;1;200;2;213;34;;;v;;r;;d19,200;;b0,0;;m">
+					<treenode node="contact;Php:Function Name;1;209;2;222;34;;;v;;r;;d19,209;;b0,0;;m">
 					</treenode>
-					<treenode node="dress_info;Php:Function Name;1;92;2;111;34;;;v;;r;;d22,92;;b0,0;;m">
+					<treenode node="dress_info;Php:Function Name;1;101;2;120;34;;;v;;r;;d22,101;;b0,0;;m">
 					</treenode>
-					<treenode node="dresses;Php:Function Name;1;55;2;90;34;;;v;;r;;d19,55;;b0,0;;m">
+					<treenode node="dresses;Php:Function Name;1;55;2;99;34;;;v;;r;;d19,55;;b0,0;;m">
 					</treenode>
-					<treenode node="email_check;Php:Function Name;1;247;2;253;34;;;v;;r;;d29,247;;b0,0;;memail;;p">
+					<treenode node="email_check;Php:Function Name;1;256;2;262;34;;;v;;r;;d29,256;;b0,0;;memail;;p">
 					</treenode>
 					<treenode node="index;Php:Function Name;1;40;2;53;34;;;v;;r;;d17,40;;b0,0;;m">
 					</treenode>
-					<treenode node="insert_email;Php:Function Name;1;229;2;243;34;;;v;;r;;d24,229;;b0,0;;m">
+					<treenode node="insert_email;Php:Function Name;1;238;2;252;34;;;v;;r;;d24,238;;b0,0;;m">
 					</treenode>
-					<treenode node="operation_date;Php:Function Name;1;305;2;312;34;;;v;;r;;d32,305;;b0,0;;mfield;;p">
+					<treenode node="operation_date;Php:Function Name;1;314;2;321;34;;;v;;r;;d32,314;;b0,0;;mfield;;p">
 					</treenode>
-					<treenode node="operation_date_minus;Php:Function Name;1;323;2;330;34;;;v;;r;;d38,323;;b0,0;;mfield;;p">
+					<treenode node="operation_date_minus;Php:Function Name;1;332;2;339;34;;;v;;r;;d38,332;;b0,0;;mfield;;p">
 					</treenode>
-					<treenode node="operation_date_slash;Php:Function Name;1;314;2;321;34;;;v;;r;;d38,314;;b0,0;;mfield;;p">
+					<treenode node="operation_date_slash;Php:Function Name;1;323;2;330;34;;;v;;r;;d38,323;;b0,0;;mfield;;p">
 					</treenode>
-					<treenode node="sendmail;Php:Function Name;1;332;2;347;34;;;v;;r;;d46,332;;b0,0;;memail;;pmsg;;psubject;;pfrom;;p">
+					<treenode node="sendmail;Php:Function Name;1;341;2;356;34;;;v;;r;;d46,341;;b0,0;;memail;;pmsg;;psubject;;pfrom;;p">
 					</treenode>
-					<treenode node="services;Php:Function Name;1;170;2;183;34;;;v;;r;;d20,170;;b0,0;;m">
+					<treenode node="services;Php:Function Name;1;179;2;192;34;;;v;;r;;d20,179;;b0,0;;m">
 					</treenode>
-					<treenode node="thanks;Php:Function Name;1;215;2;227;34;;;v;;r;;d18,215;;b0,0;;m">
+					<treenode node="thanks;Php:Function Name;1;224;2;236;34;;;v;;r;;d18,224;;b0,0;;m">
 					</treenode>
-					<treenode node="viewimage;Php:Function Name;1;292;2;303;34;;;v;;r;;d21,292;;b0,0;;m">
+					<treenode node="viewimage;Php:Function Name;1;301;2;312;34;;;v;;r;;d21,301;;b0,0;;m">
 					</treenode>
 					<treenode node="months;Php:Var Name;5;5;12;5;34;;;v;;r;;d-1,-1;;b0,0;;m">
 					</treenode>
@@ -4663,12 +4663,12 @@
 				</treenode>
 			</phptree>
 		</csfile><csfile name="C:\denwer\home\lovesonnet.ru\www\main\controllers\index.html" crc="-1574479902">
-		</csfile><csfile name="C:\denwer\home\lovesonnet.ru\www\main\controllers\admin_interface.php" crc="-161325377">
+		</csfile><csfile name="C:\denwer\home\lovesonnet.ru\www\main\controllers\admin_interface.php" crc="689068948">
 			<phptree>
-				<treenode node="Admin_interface;Php:Class Name;0;2;1;405;34;;;vCI_Controller;;c;;r;;d44,2;;b0,0;;m">
+				<treenode node="Admin_interface;Php:Class Name;0;2;1;442;34;;;vCI_Controller;;c;;r;;d44,2;;b0,0;;m">
 					<treenode node="__construct;Php:Function Name;1;10;2;39;34;;;v;;r;;d23,10;;b0,0;;m">
 					</treenode>
-					<treenode node="case_image;Php:Function Name;1;395;2;404;34;;;v;;r;;d27,395;;b0,0;;mfile;;p">
+					<treenode node="case_image;Php:Function Name;1;432;2;441;34;;;v;;r;;d27,432;;b0,0;;mfile;;p">
 					</treenode>
 					<treenode node="operation_date;Php:Function Name;1;225;2;232;34;;;v;;r;;d32,225;;b0,0;;mfield;;p">
 					</treenode>
@@ -4682,11 +4682,13 @@
 					</treenode>
 					<treenode node="resize_big_image;Php:Function Name;1;341;2;360;34;;;v;;r;;d53,341;;b0,0;;mtmpName;;pwgt;;phgt;;pratio;;p">
 					</treenode>
-					<treenode node="resize_image;Php:Function Name;1;362;2;375;34;;;v;;r;;d47,362;;b0,0;;mimage;;pwgt;;phgt;;pratio;;p">
+					<treenode node="resize_image;Php:Function Name;1;399;2;412;34;;;v;;r;;d47,399;;b0,0;;mimage;;pwgt;;phgt;;pratio;;p">
 					</treenode>
 					<treenode node="resize_img;Php:Function Name;1;294;2;339;34;;;v;;r;;d47,294;;b0,0;;mtmpName;;pwgt;;phgt;;pratio;;p">
 					</treenode>
-					<treenode node="resize_photo;Php:Function Name;1;377;2;393;34;;;v;;r;;d49,377;;b0,0;;mtmpName;;pwgt;;phgt;;pratio;;p">
+					<treenode node="resize_main_image;Php:Function Name;1;362;2;397;34;;;v;;r;;d54,362;;b0,0;;mtmpName;;pwgt;;phgt;;pratio;;p">
+					</treenode>
+					<treenode node="resize_photo;Php:Function Name;1;414;2;430;34;;;v;;r;;d49,414;;b0,0;;mtmpName;;pwgt;;phgt;;pratio;;p">
 					</treenode>
 					<treenode node="shutdown;Php:Function Name;1;219;2;223;34;;;v;;r;;d20,219;;b0,0;;m">
 					</treenode>
@@ -6955,4 +6957,6 @@
 				</treenode>
 			</phptree>
 		</csfile><csfile name="C:\denwer\home\lovesonnet.ru\www\.htaccess" crc="-1450414719">
-		</csfile></codestructure></project>
+		</csfile></codestructure><dbgurls>
+	</dbgurls>
+</project>

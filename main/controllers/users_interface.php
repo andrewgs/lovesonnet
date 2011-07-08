@@ -69,6 +69,7 @@ class Users_interface extends CI_Controller {
 					'pages'			=> ''
 			);
 		
+		
 		$pagevar['count'] = $this->units->count_records(1);
 		
 		$config['base_url'] 		= $pagevar['baseurl'].'dresses/';
@@ -84,6 +85,14 @@ class Users_interface extends CI_Controller {
 		$config['cur_tag_close'] 	= '</b>';
 		$from = intval($this->uri->segment(2));
 		$pagevar['units'] = $this->units->read_limit_records(1,12,$from);
+		for($i=0;$i<count($pagevar['units']);$i++):
+			if(mb_strlen($pagevar['units'][$i]['note'],'UTF-8') > 150):									
+				$pagevar['units'][$i]['note'] = mb_substr($pagevar['units'][$i]['note'],0,150,'UTF-8');	
+				$pos = mb_strrpos($pagevar['units'][$i]['note'],' ',0,'UTF-8');
+				$pagevar['units'][$i]['note'] = mb_substr($pagevar['units'][$i]['note'],0,$pos,'UTF-8');
+				$pagevar['units'][$i]['note'] .= ' ... ';
+			endif;
+		endfor;
 		$this->pagination->initialize($config);
 		$pagevar['pages'] = $this->pagination->create_links();
 
@@ -147,7 +156,7 @@ class Users_interface extends CI_Controller {
 					'count'			=> 0,
 					'pages'			=> ''
 			);
-		$pagevar['count'] = $this->units->count_records(1);
+		$pagevar['count'] = $this->units->count_records(0);
 		
 		$config['base_url'] 		= $pagevar['baseurl'].'accessories/';
         $config['total_rows'] 		= $pagevar['count']; 
